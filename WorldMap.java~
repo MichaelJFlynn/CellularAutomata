@@ -1,0 +1,53 @@
+
+import java.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class WorldMap {
+
+
+    static protected WorldMapImpl map = null;
+    
+    static public void createWorldMap(int x, int y) {
+	if(!(map == null)) {
+	    System.out.println("WorldMap already created");
+	    System.exit(0);
+	} else {
+	    map = new WorldMapImpl(x,y);
+	    try { Thread.sleep(100); } catch (Exception e) {}
+	}
+    }
+
+
+    static public void displaySquare(Position pos, String color) {
+	if(map == null) {
+	    System.out.println("WorldMap not created yet.");
+	    System.exit(0);
+	}
+	map.displaySquareInst(pos, color);
+    }
+
+    static public void paus(int millis) {
+	try{ Thread.sleep(millis); } catch(Exception e) {}
+    }
+
+
+    static class WorldMapImpl extends JPanel {
+
+	private static final long serialVersionUID = OL;
+
+	protected static final int SQUARE_SIZE = 22;
+	protected static final int PENT_SIZE = 9;
+	protected static final int INSET = 10;
+	
+
+	protected int width, height;
+	protected Cell board[][];
+
+
+
+
+
+    }
+}
