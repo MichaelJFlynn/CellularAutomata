@@ -5,4 +5,4 @@ CellularAutomata
 
 
 I might eventually make a tutorial on how to do this, it is really simple and can lead to some pretty
-interesting things, perhaps even a new kind of science?? 
+interesting things, perhaps even a New Kind of Science?? 
